@@ -3,6 +3,7 @@
 import os
 import datetime as dt
 
+os.environ["USE_PYGEOS"] = "0"
 import pandas as pd
 import numpy as np
 from shapely.geometry import Polygon, MultiPolygon
@@ -10,7 +11,6 @@ import h3
 from tobler.util import h3fy
 from tobler.area_weighted import area_interpolate
 
-os.environ["USE_PYGEOS"] = "0"
 import geopandas as gp
 from pyogrio import read_dataframe, write_dataframe, list_layers, read_info
 
